@@ -66,7 +66,7 @@
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
         </p>
       </div>
-      <div class="row doc-box">
+      <div class="row doc-box justify-content-between">
         <div
           v-for="(doc, i) in doctors"
           :key="i"
@@ -214,16 +214,32 @@ export default {
   }
   .doc-box {
     width: 70%;
-    margin: 1em auto;
+    margin: 0 auto;
     .doc-card {
-      margin: 0 1em;
-      flex-basis: calc((100% / 3) - 2em);
+      padding: 0;
+      margin: 3em 0 6em 0;
+      flex-basis: calc((100% / 3 - 2em));
       img {
         width: 100%;
       }
       .card-text {
         background-color: white;
-        padding: 1em;
+        padding: 2em 1.5em;
+        h3 {
+          font-size: 1em;
+          font-weight: lighter;
+          margin-top: 1em;
+        }
+        h4 {
+          font-weight: lighter;
+          font-size: 0.9em;
+          margin-bottom: 2em;
+        }
+        p {
+          font-size: 0.9em;
+          line-height: 2.1em;
+          color: #7c858f;
+        }
       }
     }
   }

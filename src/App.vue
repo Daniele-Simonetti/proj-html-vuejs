@@ -73,7 +73,7 @@ export default {
           img: 'doctor-1-200x206.jpg',
           name: 'Jon Snow',
           job: 'Anesthesiologist',
-          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          description: 'At vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
           icons: [
             {
               facebook: 'FB',
@@ -90,7 +90,7 @@ export default {
           img: 'doctor-2-200x206.jpg',
           name: 'Tony Stark',
           job: 'Cardiologist',
-          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          description: 'At vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
           icons: [
             {
               facebook: 'FB',
@@ -107,7 +107,7 @@ export default {
           img: 'doctor-3-200x206.jpg',
           name: 'Anna Smith',
           job: 'Nurse Practitioner',
-          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          description: 'At vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
           icons: [
             {
               facebook: 'FB',
