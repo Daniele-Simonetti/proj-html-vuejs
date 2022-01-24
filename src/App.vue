@@ -5,7 +5,9 @@
     <Header
       :links="headerlinks"
     />
-    <Main />
+    <Main
+      :maj-infos="majorInfos"
+    />
     <Footer />
   </div>
 </template>
@@ -40,6 +42,29 @@ export default {
         {
           name: 'Articles',
           href: '#',
+        },
+      ],
+      majorInfos: [
+        {
+          // eslint-disable-next-line quotes
+          icon: `icon-1.png`,
+          title: 'Same day appointments',
+          text: 'Sed ut pespiciatis unde omnis iste natus error sit voluptatem accusantium',
+        },
+        {
+          icon: 'icon-2.png',
+          title: 'World class facilities',
+          text: 'Sed ut pespiciatis unde omnis iste natus error sit voluptatem accusantium',
+        },
+        {
+          icon: 'icon-3.png',
+          title: 'Expert doctors',
+          text: 'Sed ut pespiciatis unde omnis iste natus error sit voluptatem accusantium',
+        },
+        {
+          icon: 'icon-4.png',
+          title: 'Complementary therapies',
+          text: 'Sed ut pespiciatis unde omnis iste natus error sit voluptatem accusantium',
         },
       ],
     };

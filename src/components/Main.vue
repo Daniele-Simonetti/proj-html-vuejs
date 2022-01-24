@@ -3,7 +3,7 @@
     <!-- creo il jumbo con lo sfondo che copre anche l'header -->
     <div class="jumbo">
       <div class="row">
-        <div class="col-4  jumbo-text">
+        <div class=" jumbo-text">
           <h1>Caring <span>For Life</span></h1>
           <p>
             Kind words can be short and easy to speak, but their echoes are truly endless.
@@ -32,12 +32,36 @@
         </div>
       </div>
     </div>
+    <div class=" box-cards">
+      <div class="row cards justify-content-between">
+        <div
+          v-for="(info, index) in majInfos"
+          :key="index"
+          class=""
+        >
+          <img
+            :src="require(`../assets/images/${info.icon}`)"
+            :alt="info.title"
+          >
+          <h3>{{ info.title }}</h3>
+          <p>{{ info.text }}</p>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
 <script>
 export default {
   name: 'Main',
+  props: {
+    majInfos: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
 };
 </script>
 
@@ -49,9 +73,8 @@ export default {
 
   // height: 865px;
   .jumbo-text {
-    margin-top: 15%;
-    margin-left: 25%;
-    margin-bottom: 22%;
+    width: 51%;
+    margin: 15% auto;
     h1 {
       color: white;
     }
@@ -77,8 +100,26 @@ export default {
 .general-text {
   font-weight: 100;
   padding: 0 7em;
+  margin-top: 4em;
+  h2 {
+    font-weight: 100;
+    margin-bottom: 0.5em;
+  }
   p {
     font-weight: 500;
+    line-height: 2em;
   }
+}
+.box-cards {
+  width: 70%;
+  margin: 5em auto;
+  .cards {
+    div {
+
+      flex-basis: calc((100% / 4) - 2em);
+      text-align: center;
+    }
+  }
+
 }
 </style>

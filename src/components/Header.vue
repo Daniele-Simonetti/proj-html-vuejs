@@ -72,6 +72,11 @@ header {
         color: white;
         padding: 0 1.1em;
         font-size: 0.8em;
+        &:hover,
+        &:active,
+        &:focus {
+          color: #39afbb;
+        }
       }
       button {
         font-size: 0.9em;
