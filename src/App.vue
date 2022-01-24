@@ -26,19 +26,19 @@ export default {
     return {
       headerlinks: [
         {
-          name: 1,
+          name: 'Home',
           href: '#',
         },
         {
-          name: 1,
+          name: 'About',
           href: '#',
         },
         {
-          name: 1,
+          name: 'Departments',
           href: '#',
         },
         {
-          name: 1,
+          name: 'Articles',
           href: '#',
         },
       ],

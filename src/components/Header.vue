@@ -1,16 +1,20 @@
 <template>
   <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          logo
+    <!-- creo un haeder con link dinamici -->
+    <div class="container-xl">
+      <div class="row nav-bar">
+        <div class="col-6 logo">
+          <img
+            src="../assets/images/medical_logo_2x_light.png"
+            alt="logo-light"
+          >
         </div>
         <div class="col-6">
-          <ul class="nav">
+          <ul class="nav justify-content-end align-items-center flex-nowrap">
             <li
               v-for="(link, index) in links"
               :key="index"
-              class="nav-item"
+              class="nav-item text-uppercase"
             >
               <a
                 :href="link.href"
@@ -20,9 +24,9 @@
             <li>
               <button
                 type="button"
-                class="btn btn-primary btn-lg"
+                class="btn btn-primary btn-lg text-uppercase"
               >
-                Make an appointment
+                Make appointment
               </button>
             </li>
           </ul>
@@ -46,6 +50,43 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+header {
+  // background-image: url('../assets/images/header-image-homepage.jpg');
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  .nav-bar {
+    padding: 1em 0;
+  }
+  .logo {
+    img {
+      width: 40%;
+    }
+  }
+  ul {
+    li {
+      a {
+        color: white;
+        padding: 0 1.1em;
+        font-size: 0.8em;
+      }
+      button {
+        font-size: 0.9em;
+        background-color: #39afbb;
+        border: 0;
+        border-radius: 0.2rem;
+        padding: 0.5em 1.8em;
+        &:active,
+        &:focus {
+          border: 0;
+          box-shadow: 0;
+        }
+      }
+    }
+  }
+}
 
 </style>
