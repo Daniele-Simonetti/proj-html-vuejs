@@ -7,6 +7,7 @@
     />
     <Main
       :maj-infos="majorInfos"
+      :doctors="docs"
     />
     <Footer />
   </div>
@@ -65,6 +66,59 @@ export default {
           icon: 'icon-4.png',
           title: 'Complementary therapies',
           text: 'Sed ut pespiciatis unde omnis iste natus error sit voluptatem accusantium',
+        },
+      ],
+      docs: [
+        {
+          img: 'doctor-1-200x206.jpg',
+          name: 'Jon Snow',
+          job: 'Anesthesiologist',
+          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          icons: [
+            {
+              facebook: 'FB',
+            },
+            {
+              twitter: 'TW',
+            },
+            {
+              instagram: 'IN',
+            },
+          ],
+        },
+        {
+          img: 'doctor-2-200x206.jpg',
+          name: 'Tony Stark',
+          job: 'Cardiologist',
+          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          icons: [
+            {
+              facebook: 'FB',
+            },
+            {
+              twitter: 'TW',
+            },
+            {
+              instagram: 'IN',
+            },
+          ],
+        },
+        {
+          img: 'doctor-3-200x206.jpg',
+          name: 'Anna Smith',
+          job: 'Nurse Practitioner',
+          description: 'AT vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
+          icons: [
+            {
+              facebook: 'FB',
+            },
+            {
+              twitter: 'TW',
+            },
+            {
+              instagram: 'IN',
+            },
+          ],
         },
       ],
     };

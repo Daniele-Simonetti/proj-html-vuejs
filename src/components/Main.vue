@@ -50,6 +50,47 @@
         </div>
       </div>
     </div>
+    <div class="ourDoc">
+      <div class="row justify-content-center text-center text-box">
+        <img
+          :src="require(`../assets/images/icon-5.png`)"
+          alt="doc-logo"
+          class="doc-logo"
+        >
+        <h2 class="text-uppercase">
+          Meet our Doctors
+        </h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium dolorumque laudantium,
+          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+        </p>
+      </div>
+      <div class="row doc-box">
+        <div
+          v-for="(doc, i) in doctors"
+          :key="i"
+          class="doc-card"
+        >
+          <img
+            :src="require(`../assets/images/${doc.img}`)"
+            :alt="doc.name"
+          >
+          <div class="card-text">
+            <h3 class="text-uppercase">
+              {{ doc.name }}
+            </h3>
+            <h4>{{ doc.job }}</h4>
+            <p>{{ doc.description }}</p>
+            <div>
+              <i>1</i>
+              <i>2</i>
+              <i>3</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -58,6 +99,12 @@ export default {
   name: 'Main',
   props: {
     majInfos: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+    doctors: {
       type: Array,
       default() {
         return [];
@@ -132,6 +179,51 @@ export default {
       }
       img {
         width: 30%;
+      }
+    }
+  }
+}
+.ourDoc {
+  .doc-logo {
+    margin-top: 4em;
+    width: 6%;
+  }
+  background-color: #f1efef;
+  h2 {
+    font-weight: lighter;
+    margin-top: 0.5em;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    width: 18%;
+    margin: 0.9em auto;
+    height: 1px;
+    background-color: gray;
+  }
+  hr {
+    display: block;
+    width: 10%;
+  }
+  .text-box {
+    p {
+      width: 37%;
+      line-height: 2em;
+      font-weight: 300;
+    }
+  }
+  .doc-box {
+    width: 70%;
+    margin: 1em auto;
+    .doc-card {
+      margin: 0 1em;
+      flex-basis: calc((100% / 3) - 2em);
+      img {
+        width: 100%;
+      }
+      .card-text {
+        background-color: white;
+        padding: 1em;
       }
     }
   }
