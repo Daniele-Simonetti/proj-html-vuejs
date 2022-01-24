@@ -2,7 +2,9 @@
   <div
     id="app"
   >
-    <Header />
+    <Header
+      :links="headerlinks"
+    />
     <Main />
     <Footer />
   </div>
@@ -20,6 +22,28 @@ export default {
     Main,
     Footer,
   },
+  data() {
+    return {
+      headerlinks: [
+        {
+          name: 1,
+          href: '#',
+        },
+        {
+          name: 1,
+          href: '#',
+        },
+        {
+          name: 1,
+          href: '#',
+        },
+        {
+          name: 1,
+          href: '#',
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -30,8 +54,5 @@ export default {
   font-family: $fontFamily;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
