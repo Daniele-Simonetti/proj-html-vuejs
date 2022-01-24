@@ -1,7 +1,7 @@
 <template>
   <header>
     <!-- creo un haeder con link dinamici -->
-    <div class="container-xl">
+    <div class="container-fluid">
       <div class="row nav-bar">
         <div class="col-6 logo">
           <img
@@ -63,7 +63,7 @@ header {
   }
   .logo {
     img {
-      width: 40%;
+      width: 35%;
     }
   }
   ul {
@@ -81,8 +81,9 @@ header {
         padding: 0.5em 1.8em;
         &:active,
         &:focus {
+          background-color: #39afbb;
           border: 0;
-          box-shadow: 0;
+          box-shadow: 0 0 0 0;
         }
       }
     }
