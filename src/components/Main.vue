@@ -43,7 +43,9 @@
             :src="require(`../assets/images/${info.icon}`)"
             :alt="info.title"
           >
-          <h3>{{ info.title }}</h3>
+          <h3 class="text-uppercase">
+            {{ info.title }}
+          </h3>
           <p>{{ info.text }}</p>
         </div>
       </div>
@@ -112,14 +114,26 @@ export default {
 }
 .box-cards {
   width: 70%;
-  margin: 5em auto;
+  margin: 1em auto;
   .cards {
     div {
-
+      padding: 0;
       flex-basis: calc((100% / 4) - 2em);
       text-align: center;
+      h3 {
+        font-size: 0.9em;
+      }
+      p {
+        text-align: justify;
+        line-height: 2.3em;
+        font-size: 0.8em;
+        padding: 0 0.4em;
+        word-spacing: 1px;
+      }
+      img {
+        width: 30%;
+      }
     }
   }
-
 }
 </style>
