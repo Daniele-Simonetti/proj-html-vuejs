@@ -168,7 +168,39 @@
             {{ high.title }}
           </h3>
           <p>{{ high.exp }}</p>
-          <button>ciao</button>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg text-uppercase"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 sezione -->
+    <div class="row">
+      <div class="inputarea">
+        <div />
+      </div>
+      <div class="secondgradient">
+        <div class="overflowcont d-flex flex-nowrap">
+          <img
+            :src="require(`../assets/images/client-logos-3.png`)"
+            alt="client-logo-3"
+          >
+          <img
+            :src="require(`../assets/images/client-logos-1.png`)"
+            alt="client-logo-1"
+          >
+          <img
+            :src="require(`../assets/images/client-logos-4.png`)"
+            alt="client-logo-4"
+          >
+          <img
+            :src="require(`../assets/images/client-logos-2.png`)"
+            alt="client-logo-2"
+          >
         </div>
       </div>
     </div>
@@ -326,7 +358,7 @@ export default {
   }
   .text-box {
     p {
-      width: 37%;
+      width: 38%;
       line-height: 2em;
       font-weight: 100;
     }
@@ -406,6 +438,11 @@ export default {
     width: 4%;
     margin: 2em 0 10em 0;
   }
+  .text-box {
+    p {
+      width: 38%;
+    }
+  }
 }
 .firstgradient {
   background-image: url('../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg');
@@ -422,14 +459,35 @@ export default {
     }
     p {
       font-size: 0.62em;
-      padding: 0 2em;
+      padding: 0 6em;
       line-height: 2em;
     }
     p::before {
       content: url('../assets/images/wave-divider.png');
       display: block;
       margin: 1.5em 0;
-
+    }
+    button {
+    font-size: 0.7em;
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.5em 2em;
+    border-radius: 0;
+  }
+  }
+}
+.inputarea {
+  height: 600px;
+}
+.secondgradient {
+  background-image: url('../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg');
+  .overflowcont {
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      width: 29%;
     }
   }
 }
