@@ -33,6 +33,7 @@
       </div>
     </div>
 
+    <!-- 2/5 sezione -->
     <div class=" box-cards">
       <div class="row cards justify-content-between">
         <div
@@ -52,6 +53,7 @@
       </div>
     </div>
 
+    <!-- 3/5 sezione -->
     <div class="ourDoc">
       <div class="row justify-content-center text-center text-box">
         <img
@@ -84,14 +86,19 @@
             </h3>
             <h4>{{ doc.job }}</h4>
             <p>{{ doc.description }}</p>
-            <div>
-              <i>1</i>
-              <i>2</i>
-              <i>3</i>
+            <div class="icons">
+              <i class="fab fa-facebook-square facebook" />
+              <i class="fab fa-twitter-square twitter" />
+              <i class="fab fa-instagram-square instagram" />
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- 4/5 sezione -->
+    <div class="healthServices">
+      ciao
     </div>
   </main>
 </template>
@@ -165,7 +172,7 @@ export default {
 }
 .box-cards {
   width: 70%;
-  margin: 1em auto;
+  margin: 4em auto;
   .cards {
     div {
       padding: 0;
@@ -245,6 +252,23 @@ export default {
           font-size: 0.9em;
           line-height: 2.1em;
           color: #7c858f;
+        }
+      }
+      div.icons {
+        margin: 2em 0;
+        i {
+          font-size: 2em;
+          margin-right: 0.3em;
+          cursor: pointer;
+        }
+        i.facebook {
+          color: #385898;
+        }
+        i.twitter {
+          color: #3ba5bd;
+        }
+        i.instagram {
+          color: #0764AD;
         }
       }
     }
