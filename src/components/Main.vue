@@ -55,7 +55,10 @@
 
     <!-- 3/5 sezione -->
     <div class="ourDoc">
-      <div class="row justify-content-center text-center text-box">
+      <DescrCard
+        :description="sectionpresentation"
+      />
+      <!-- <div class="row justify-content-center text-center text-box">
         <img
           :src="require(`../assets/images/icon-5.png`)"
           alt="doc-logo"
@@ -69,7 +72,7 @@
           accusantium dolorumque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
         </p>
-      </div>
+      </div> -->
       <div class="row doc-box justify-content-between">
         <div
           v-for="(doc, i) in doctors"
@@ -105,9 +108,13 @@
 
 <script>
 import '@fortawesome/fontawesome-free/css/all.css';
+import DescrCard from './DescrCard.vue';
 
 export default {
   name: 'Main',
+  components: {
+    DescrCard,
+  },
   props: {
     majInfos: {
       type: Array,
@@ -121,6 +128,30 @@ export default {
         return [];
       },
     },
+    tetsing: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
+  data() {
+    return {
+      sectionpresentation: [
+        {
+          title: 'Meet our Doctors',
+          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
+        },
+        {
+          title: 'Meet our Doctors',
+          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
+        },
+        {
+          title: 'Meet our Doctors',
+          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
+        },
+      ],
+    };
   },
 };
 </script>
@@ -196,36 +227,37 @@ export default {
     }
   }
 }
-.ourDoc {
-  .doc-logo {
-    margin-top: 4em;
-    width: 6%;
-  }
-  background-color: #f1efef;
-  h2 {
-    font-weight: lighter;
-    margin-top: 0.5em;
-  }
-  h2::after {
-    content: '';
-    display: block;
-    width: 18%;
-    margin: 0.9em auto;
-    height: 1px;
-    background-color: gray;
-  }
-  hr {
-    display: block;
-    width: 10%;
-  }
-  .text-box {
-    p {
-      width: 37%;
-      line-height: 2em;
-      font-weight: 100;
-    }
-  }
-  .doc-box {
+// .ourDoc {
+//   .doc-logo {
+//     margin-top: 4em;
+//     width: 6%;
+//   }
+//   background-color: #f1efef;
+//   h2 {
+//     font-weight: lighter;
+//     margin-top: 0.5em;
+//   }
+//   h2::after {
+//     content: '';
+//     display: block;
+//     width: 18%;
+//     margin: 0.9em auto;
+//     height: 1px;
+//     background-color: gray;
+//   }
+//   hr {
+//     display: block;
+//     width: 10%;
+//   }
+//   .text-box {
+//     p {
+//       width: 37%;
+//       line-height: 2em;
+//       font-weight: 100;
+//     }
+//   }
+// }
+.doc-box {
     width: 70%;
     margin: 0 auto;
     .doc-card {
@@ -272,6 +304,5 @@ export default {
         }
       }
     }
-  }
 }
 </style>

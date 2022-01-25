@@ -8,6 +8,7 @@
     <Main
       :maj-infos="majorInfos"
       :doctors="docs"
+      :testing="sectionpresentation"
     />
     <Footer />
   </div>
