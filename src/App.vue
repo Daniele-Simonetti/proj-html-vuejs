@@ -8,7 +8,7 @@
     <Main
       :maj-infos="majorInfos"
       :doctors="docs"
-      :testing="sectionpresentation"
+      :services="healthservices"
     />
     <Footer />
   </div>
@@ -120,6 +120,38 @@ export default {
               instagram: 'IN',
             },
           ],
+        },
+      ],
+      healthservices: [
+        {
+          icon: 'icon-14.png',
+          title: 'Rehabilitation center',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+        {
+          icon: 'icon-15.png',
+          title: 'Dental implants',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+        {
+          icon: 'icon-16.png',
+          title: 'Medicine research',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+        {
+          icon: 'icon-11.png',
+          title: 'Blood bank',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+        {
+          icon: 'icon-12.png',
+          title: 'Pharmaceutical advice',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+        {
+          icon: 'icon-13.png',
+          title: 'Medical consuealing',
+          explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
         },
       ],
     };

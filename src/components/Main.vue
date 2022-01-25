@@ -55,10 +55,7 @@
 
     <!-- 3/5 sezione -->
     <div class="ourDoc">
-      <DescrCard
-        :description="sectionpresentation"
-      />
-      <!-- <div class="row justify-content-center text-center text-box">
+      <div class="row justify-content-center text-center text-box">
         <img
           :src="require(`../assets/images/icon-5.png`)"
           alt="doc-logo"
@@ -72,7 +69,7 @@
           accusantium dolorumque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
         </p>
-      </div> -->
+      </div>
       <div class="row doc-box justify-content-between">
         <div
           v-for="(doc, i) in doctors"
@@ -101,19 +98,49 @@
 
     <!-- 4/5 sezione -->
     <div class="healthServices">
-      ciao
+      <div class="row justify-content-center text-center text-box">
+        <img
+          :src="require(`../assets/images/icon-6.png`)"
+          alt="doc-logo"
+          class="doc-logo"
+        >
+        <h2 class="text-uppercase">
+          Our health services
+        </h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium dolorumque laudantium,
+          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+        </p>
+      </div>
+    </div>
+    <div class="row-cols-3 box-cards">
+      <div class="col-12 justify-content-between">
+        <div
+          v-for="(service, n) in services"
+          :key="n"
+          class="services"
+        >
+          <img
+            :src="require(`../assets/images/${service.icon}`)"
+            :alt="service.title"
+          >
+          <h3 class="text-uppercase">
+            {{ service.title }}
+          </h3>
+          <p>{{ service.explanation }}</p>
+        </div>
+      </div>
     </div>
   </main>
 </template>
 
 <script>
 import '@fortawesome/fontawesome-free/css/all.css';
-import DescrCard from './DescrCard.vue';
 
 export default {
   name: 'Main',
   components: {
-    DescrCard,
   },
   props: {
     majInfos: {
@@ -128,7 +155,7 @@ export default {
         return [];
       },
     },
-    tetsing: {
+    services: {
       type: Array,
       default() {
         return [];
@@ -227,36 +254,37 @@ export default {
     }
   }
 }
-// .ourDoc {
-//   .doc-logo {
-//     margin-top: 4em;
-//     width: 6%;
-//   }
-//   background-color: #f1efef;
-//   h2 {
-//     font-weight: lighter;
-//     margin-top: 0.5em;
-//   }
-//   h2::after {
-//     content: '';
-//     display: block;
-//     width: 18%;
-//     margin: 0.9em auto;
-//     height: 1px;
-//     background-color: gray;
-//   }
-//   hr {
-//     display: block;
-//     width: 10%;
-//   }
-//   .text-box {
-//     p {
-//       width: 37%;
-//       line-height: 2em;
-//       font-weight: 100;
-//     }
-//   }
-// }
+.ourDoc,
+.healthServices {
+  .doc-logo {
+    margin-top: 4em;
+    width: 6%;
+  }
+  background-color: #f1efef;
+  h2 {
+    font-weight: lighter;
+    margin-top: 0.5em;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    width: 18%;
+    margin: 0.9em auto;
+    height: 1px;
+    background-color: gray;
+  }
+  hr {
+    display: block;
+    width: 10%;
+  }
+  .text-box {
+    p {
+      width: 37%;
+      line-height: 2em;
+      font-weight: 100;
+    }
+  }
+}
 .doc-box {
     width: 70%;
     margin: 0 auto;
@@ -305,4 +333,12 @@ export default {
       }
     }
 }
+.healthServices {
+  background-color: white;
+}
+  div.services {
+    width: calc(100% / 3);
+    display: block;
+  }
+
 </style>
