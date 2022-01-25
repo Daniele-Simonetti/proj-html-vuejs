@@ -114,12 +114,12 @@
         </p>
       </div>
     </div>
-    <div class="row-cols-3 box-cards">
-      <div class="col-12 justify-content-between">
+    <div class="box-cards">
+      <div class="row cards card-serv justify-content-between">
         <div
           v-for="(service, n) in services"
+          id="services"
           :key="n"
-          class="services"
         >
           <img
             :src="require(`../assets/images/${service.icon}`)"
@@ -336,9 +336,18 @@ export default {
 .healthServices {
   background-color: white;
 }
-  div.services {
-    width: calc(100% / 3);
-    display: block;
+  #services {
+    flex-basis: calc((100% / 3) - 2em);
+    img {
+      width: 25%;
+      margin-top: 3em
+    };
+    h3 {
+      margin: 1em 0;
+    }
+    p {
+      text-align: center;
+    }
   }
 
 </style>
