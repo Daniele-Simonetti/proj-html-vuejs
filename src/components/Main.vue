@@ -33,7 +33,6 @@
       </div>
     </div>
 
-    <!-- 2/5 sezione -->
     <div class=" box-cards">
       <div class="row cards justify-content-between">
         <div
@@ -53,7 +52,7 @@
       </div>
     </div>
 
-    <!-- 3/5 sezione -->
+    <!-- 2/5 sezione -->
     <div class="ourDoc">
       <div class="row justify-content-center text-center text-box">
         <img
@@ -96,7 +95,7 @@
       </div>
     </div>
 
-    <!-- 4/5 sezione -->
+    <!-- 3/5 sezione -->
     <div class="healthServices">
       <div class="row justify-content-center text-center text-box">
         <img
@@ -132,6 +131,47 @@
         </div>
       </div>
     </div>
+
+    <!-- 4/5 sezione -->
+    <div class="tourFacilities">
+      <div class="row justify-content-center text-center text-box">
+        <img
+          :src="require(`../assets/images/icon-7.png`)"
+          alt="doc-logo"
+          class="doc-logo"
+        >
+        <h2 class="text-uppercase">
+          Tour our facilities
+        </h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium dolorumque laudantium,
+          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+        </p>
+        <div>
+          <img
+            :src="require(`../assets/images/play-icon.png`)"
+            alt="play-logo"
+            class="play-logo"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="firstgradient">
+      <div class="row">
+        <div
+          v-for="(high, x) in facHighlight"
+          :key="x"
+          class="most"
+        >
+          <h3 class="">
+            {{ high.title }}
+          </h3>
+          <p>{{ high.exp }}</p>
+          <button>ciao</button>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -156,6 +196,12 @@ export default {
       },
     },
     services: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+    facHighlight: {
       type: Array,
       default() {
         return [];
@@ -255,7 +301,8 @@ export default {
   }
 }
 .ourDoc,
-.healthServices {
+.healthServices,
+.tourFacilities {
   .doc-logo {
     margin-top: 4em;
     width: 6%;
@@ -336,7 +383,7 @@ export default {
 .healthServices {
   background-color: white;
 }
-  #services {
+#services {
     flex-basis: calc((100% / 3) - 2em);
     img {
       width: 25%;
@@ -348,6 +395,42 @@ export default {
     p {
       text-align: center;
     }
+}
+.tourFacilities {
+  background-image: url('../assets/images/paralax-bg-tour-facilities.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding-top: 5em;
+  .play-logo {
+    width: 4%;
+    margin: 2em 0 10em 0;
   }
+}
+.firstgradient {
+  background-image: url('../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg');
+  .most {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+    padding: 3.5em 0;
+    // margin: 3.5em 0;
+    color: white;
+    font-weight: 100;
+    border-right: 1px solid lightblue;
+    h3 {
+      font-size: 1em;
+    }
+    p {
+      font-size: 0.62em;
+      padding: 0 2em;
+      line-height: 2em;
+    }
+    p::before {
+      content: url('../assets/images/wave-divider.png');
+      display: block;
+      margin: 1.5em 0;
 
+    }
+  }
+}
 </style>

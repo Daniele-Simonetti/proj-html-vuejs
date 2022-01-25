@@ -9,6 +9,7 @@
       :maj-infos="majorInfos"
       :doctors="docs"
       :services="healthservices"
+      :fac-highlight="facilitiesMost"
     />
     <Footer />
   </div>
@@ -152,6 +153,20 @@ export default {
           icon: 'icon-13.png',
           title: 'Medical consuealing',
           explanation: 'At vero eos et accusamus et iusto odio didnissimos ducimus qui blanditis praesentium voluptatum deleniti atque corrupti quos dolores et quas',
+        },
+      ],
+      facilitiesMost: [
+        {
+          title: 'Emergency Care',
+          exp: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolerumque laudantium, totam rem aperiam, eaque',
+        },
+        {
+          title: 'Expert Diagnostic',
+          exp: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolerumque laudantium, totam rem aperiam, eaque',
+        },
+        {
+          title: 'Superb Rehabilitation',
+          exp: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolerumque laudantium, totam rem aperiam, eaque',
         },
       ],
     };
