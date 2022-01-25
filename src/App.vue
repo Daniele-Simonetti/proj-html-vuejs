@@ -79,13 +79,13 @@ export default {
           description: 'At vero eos et accusamus et iusto odio dignissimo ducimus qui blanditis praesentium voluptatum deleniti atque',
           icons: [
             {
-              facebook: 'FB',
+              facebook: 'fa-facebook-square',
             },
             {
-              twitter: 'TW',
+              twitter: 'fa-twitter-square',
             },
             {
-              instagram: 'IN',
+              instagram: 'fa-instagram-square',
             },
           ],
         },
