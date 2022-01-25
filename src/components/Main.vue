@@ -97,6 +97,8 @@
 </template>
 
 <script>
+import '@fortawesome/fontawesome-free/css/all.css';
+
 export default {
   name: 'Main',
   props: {
@@ -169,8 +171,10 @@ export default {
       padding: 0;
       flex-basis: calc((100% / 4) - 2em);
       text-align: center;
+      font-weight: 100;
       h3 {
         font-size: 0.9em;
+        font-weight: 300;
       }
       p {
         text-align: justify;
@@ -211,7 +215,7 @@ export default {
     p {
       width: 37%;
       line-height: 2em;
-      font-weight: 300;
+      font-weight: 100;
     }
   }
   .doc-box {
