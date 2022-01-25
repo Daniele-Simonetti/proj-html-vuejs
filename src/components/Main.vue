@@ -184,23 +184,18 @@
         <div />
       </div>
       <div class="secondgradient">
-        <div class="overflowcont d-flex flex-nowrap">
-          <img
-            :src="require(`../assets/images/client-logos-3.png`)"
-            alt="client-logo-3"
+        <div
+          class="overflowcont d-flex flex-nowrap"
+        >
+          <div
+            v-for="(icon, i) in lasticons"
+            :key="i"
           >
-          <img
-            :src="require(`../assets/images/client-logos-1.png`)"
-            alt="client-logo-1"
-          >
-          <img
-            :src="require(`../assets/images/client-logos-4.png`)"
-            alt="client-logo-4"
-          >
-          <img
-            :src="require(`../assets/images/client-logos-2.png`)"
-            alt="client-logo-2"
-          >
+            <img
+              :src="require(`../assets/images/${icon.icon}`)"
+              :alt="icon.alt"
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -234,6 +229,12 @@ export default {
       },
     },
     facHighlight: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+    lasticons: {
       type: Array,
       default() {
         return [];
@@ -487,7 +488,7 @@ export default {
     margin: 0 auto;
     overflow: hidden;
     img {
-      width: 29%;
+      width: 100%;
     }
   }
 }

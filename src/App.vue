@@ -10,6 +10,7 @@
       :doctors="docs"
       :services="healthservices"
       :fac-highlight="facilitiesMost"
+      :lasticons="lastMainIcons"
     />
     <Footer />
   </div>
@@ -167,6 +168,24 @@ export default {
         {
           title: 'Superb Rehabilitation',
           exp: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolerumque laudantium, totam rem aperiam, eaque',
+        },
+      ],
+      lastMainIcons: [
+        {
+          icon: 'client-logos-3.png',
+          alt: 'client-logos-3.png',
+        },
+        {
+          icon: 'client-logos-1.png',
+          alt: 'client-logos-1.png',
+        },
+        {
+          icon: 'client-logos-4.png',
+          alt: 'client-logos-4.png',
+        },
+        {
+          icon: 'client-logos-2.png',
+          alt: 'client-logos-2.png',
         },
       ],
     };
