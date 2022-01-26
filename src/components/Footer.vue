@@ -23,14 +23,14 @@
         <i class="fab fa-youtube-square youtube" />
         <i class="fab fa-instagram-square instagram" />
       </div>
-      <div class="col-4">
+      <div class="col-4 contactInfos">
         <h4 class="text-uppercase">
           Contact information
         </h4>
         <p><i class="fas fa-map-marker-alt" /> 121 King Street, London United Kingdom</p>
         <p><i class="fas fa-phone" /> 1.800.458.556</p>
       </div>
-      <div class="col-4">
+      <div class="col-4 medicalDep">
         <h4 class="text-uppercase">
           Medical departments
         </h4>
@@ -114,51 +114,91 @@ export default {
       margin-right: 0.3em;
     }
     i.facebook {
-
+      color: #385898;
     }
     i.twitter {
-
+      color: #3ba5bd;
     }
     i.youtube {
-
+      color: #cc201f;
     }
     i.instagram {
-
+      color: #0764AD;;
     }
   }
 }
-i.blueBGIcon {
-  background-color: #39afbb;
-  color: white;
-  font-size: 0.7em;
-  padding: 0.8em;
-}
-button {
-  font-size: 0.7em;
-  font-weight: 500;
-  color: black;
-  background-color: transparent;
-  border: 1px solid black;
-  padding: 0.5em 2em;
-  border-radius: 0;
-}
-.end {
-  background-color: #f1efef;
-  padding: 1.5em 3em;
-  ul {
-    font-size: 0.8em;
-    li {
-      padding-right: 0.5em;
-      margin: 0.3em;
-      border-right: 1px solid black;
+.contactInfos {
+  h4 {
+    margin: 0;
+    &::after {
+      content: '';
+      background-color: #449ebf;
+      margin: 0.5em 0;
+      height: 2px;
+      width: 10%;
+      display: block;
     }
-    .lastItem {
-      border-right: 0;
+  }
+  p {
+    margin: 0.5em 0;
+    font-weight: 100;
+  }
+  i {
+    color: #449ebf;
+    padding-right: 0.5em;
+  }
+}
+.medicalDep {
+  h4 {
+    margin: 0;
+    &::after {
+      content: '';
+      background-color: #449ebf;
+      margin: 0.5em 0;
+      height: 2px;
+      width: 10%;
+      display: block;
     }
+  }
+  li {
+    font-weight: 100;
+  }
+  i.blueBGIcon {
+    background-color: #39afbb;
+    color: white;
+    font-size: 0.7em;
+    padding: 0.8em;
+    margin: 0.5em 0.5em 0.5em 0;
   }
   button {
-    background-color: #3d4954;
-    color: white;
+    margin-top: 3em;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 0.5em 2.5em;
+    border-radius: 0;
   }
+
 }
+  .end {
+    background-color: #f1efef;
+    padding: 1.5em 3em;
+    ul {
+      font-size: 0.8em;
+      li {
+        padding-right: 0.5em;
+        margin: 0.3em;
+        border-right: 1px solid black;
+      }
+      .lastItem {
+        border-right: 0;
+      }
+    }
+    button {
+      background-color: #3d4954;
+      color: white;
+    }
+  }
 </style>
