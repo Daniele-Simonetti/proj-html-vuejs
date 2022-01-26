@@ -1,56 +1,79 @@
 <template>
-  <div class="row">
-    <div class="col-4">
-      <img
-        :src="require(`../assets/images/medical_logo_1x_dark.png`)"
-        alt="logo-nero"
-      >
-      <p>
-        Sed ut perspiciatis unde omnis iste
-        natus error sit voluptatem accusantium dolemue launti totam aperiam,
-        eaque ipsa quae abillo.
-        Invente veriatis et quasi architecto beatae luptatem accusantium,
-        remaperiamsiat.
-        Voluptatem accusest etsium doloremque laudaien.
-        Lorem ipsum sits dolores ets unser.
-      </p>
-      <h4 class="text-uppercase">
-        Learn more about us
-      </h4>
-      <i class="fab fa-facebook-square facebook" />
-      <i class="fab fa-twitter-square twitter" />
-      <i class="fab fa-youtube-square" />
-      <i class="fab fa-instagram-square instagram" />
-    </div>
-    <div class="col-4">
-      <h4 class="text-uppercase">
-        Contact information
-      </h4>
-      <p><i class="fas fa-map-marker-alt" /> 121 King Street, London United Kingdom</p>
-      <p><i class="fas fa-phone" /> 1.800.458.556</p>
-    </div>
-    <div class="col-4">
-      <h4 class="text-uppercase">
-        Medical departments
-      </h4>
-      <ul
-        class="list-unstyled"
-      >
-        <li
-          v-for="(depart, index) in medDepartment"
-          :key="index"
+  <footer>
+    <div class="row">
+      <div class="col-4">
+        <img
+          :src="require(`../assets/images/medical_logo_1x_dark.png`)"
+          alt="logo-nero"
         >
-          <i class="fas fa-chevron-right blueBGIcon rounded-circle" /> {{ depart }}
-        </li>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg text-uppercase"
+        <p>
+          Sed ut perspiciatis unde omnis iste
+          natus error sit voluptatem accusantium dolemue launti totam aperiam,
+          eaque ipsa quae abillo.
+          Invente veriatis et quasi architecto beatae luptatem accusantium,
+          remaperiamsiat.
+          Voluptatem accusest etsium doloremque laudaien.
+          Lorem ipsum sits dolores ets unser.
+        </p>
+        <h4 class="text-uppercase">
+          Learn more about us
+        </h4>
+        <i class="fab fa-facebook-square facebook" />
+        <i class="fab fa-twitter-square twitter" />
+        <i class="fab fa-youtube-square" />
+        <i class="fab fa-instagram-square instagram" />
+      </div>
+      <div class="col-4">
+        <h4 class="text-uppercase">
+          Contact information
+        </h4>
+        <p><i class="fas fa-map-marker-alt" /> 121 King Street, London United Kingdom</p>
+        <p><i class="fas fa-phone" /> 1.800.458.556</p>
+      </div>
+      <div class="col-4">
+        <h4 class="text-uppercase">
+          Medical departments
+        </h4>
+        <ul
+          class="list-unstyled"
         >
-          View our departments
-        </button>
-      </ul>
+          <li
+            v-for="(depart, index) in medDepartment"
+            :key="index"
+          >
+            <i class="fas fa-chevron-right blueBGIcon rounded-circle" /> {{ depart }}
+          </li>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg text-uppercase"
+          >
+            View our departments
+          </button>
+        </ul>
+      </div>
     </div>
-  </div>
+    <div class="row end">
+      <div class="col-6">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <i class="far fa-copyright" /> Copyright 2012 - 2020
+          </li>
+          <li class="list-inline-item">
+            Avada Theme by <span>Theme Fusion</span>
+          </li>
+          <li class="list-inline-item">
+            All Rights Reserved
+          </li>
+          <li class="list-inline-item lastItem">
+            Powered by <span>WordPress</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 text-end">
+        <button><i class="fas fa-chevron-up" /></button>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -86,5 +109,23 @@ button {
   padding: 0.5em 2em;
   border-radius: 0;
 }
-
+.end {
+  background-color: #f1efef;
+  padding: 1.5em;
+  ul {
+    font-size: 0.8em;
+    li {
+      padding-right: 0.5em;
+      margin: 0.3em;
+      border-right: 1px solid black;
+    }
+    .lastItem {
+      border-right: 0;
+    }
+  }
+  button {
+    background-color: #3d4954;
+    color: white;
+  }
+}
 </style>
