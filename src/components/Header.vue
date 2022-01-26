@@ -22,13 +22,16 @@
               >{{ link.name }}</a>
             </li>
             <li>
-              <button
-                id="makeApp"
-                type="button"
-                class="btn btn-primary btn-lg text-uppercase"
-              >
-                <a href="#inputBtn">Make appointment</a>
-              </button>
+              <a href="#inputBtn">
+                <button
+                  id="makeApp"
+                  type="button"
+                  class="btn btn-primary btn-lg text-uppercase"
+                >
+                  Make appointment
+                </button>
+
+              </a>
             </li>
           </ul>
         </div>

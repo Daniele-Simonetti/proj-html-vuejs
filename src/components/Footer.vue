@@ -70,12 +70,15 @@
         </ul>
       </div>
       <div class="col-6 text-end">
-        <button>
-          <a
-            class="text-decoration-none"
-            href="#makeApp"
-          ><i class="fas fa-chevron-up" /></a>
-        </button>
+        <a
+          href="#makeApp"
+          class="text-decoration-none"
+        >
+          <button>
+            <i class="fas fa-chevron-up" />
+          </button>
+
+        </a>
       </div>
     </div>
   </footer>

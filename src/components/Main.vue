@@ -439,6 +439,7 @@ export default {
   background-image: url('../assets/images/paralax-bg-tour-facilities.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   color: white;
   padding-top: 5em;
   .play-logo {
@@ -485,12 +486,12 @@ export default {
   }
 }
 .inputarea {
-  // height: 600px;
   background-image: url('../assets/images/make-an-appointment.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   color: white;
-  padding-top: 5em;
+  padding-top: 3em;
   h2 {
     font-weight: lighter;
     margin-top: 1.5em;
