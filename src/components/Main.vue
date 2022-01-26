@@ -337,10 +337,6 @@ export default {
     height: 1px;
     background-color: gray;
   }
-  // hr {
-  //   display: block;
-  //   width: 10%;
-  // }
   .text-box {
     p {
       width: 38%;
