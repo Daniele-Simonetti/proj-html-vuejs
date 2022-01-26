@@ -181,6 +181,17 @@
     <!-- 5 sezione -->
     <div class="row">
       <div class="inputarea">
+        <div class="row justify-content-center text-center text-box">
+          <h2 class="">
+            Make An Appointment
+          </h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium dolorumque laudantium,
+            totam rem aperiam,
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+          </p>
+        </div>
         <InputForm />
       </div>
       <div class="secondgradient">
@@ -242,6 +253,16 @@ export default {
         return [];
       },
     },
+  },
+  data() {
+    return {
+      inputs: [],
+    };
+  },
+  methods: {
+    // testing(testing) {
+    //   this.inputs.inputName = testing;
+    // },
   },
 };
 </script>
@@ -465,6 +486,25 @@ export default {
   background-position: center;
   color: white;
   padding-top: 5em;
+  h2 {
+    font-weight: lighter;
+    margin-top: 1.5em;
+  }
+  h2::after {
+    content: '';
+    display: block;
+    width: 18%;
+    margin: 0.9em auto;
+    height: 1px;
+    background-color: gray;
+  }
+.text-box {
+  p {
+    width: 38%;
+    line-height: 2em;
+    font-weight: 100;
+  }
+}
 }
 .secondgradient {
   background-image: url('../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg');
