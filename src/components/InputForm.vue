@@ -85,13 +85,24 @@ export default {
   },
   methods: {
     checkTextinput() {
-      if (this.inputName.trim() && this.inputEmail.trim() && this.inputDate && this.inputText.trim() !== '') {
+      if (this.inputName.trim() && this.inputEmail.trim() && this.inputDate && this.inputText.trim() && this.inputPhone.trim() !== '') {
         return this.inputName
         && this.inputEmail
         && this.inputDate
-        && this.inputText;
+        && this.inputText
+        && this.inputPhone
+        && this.cleanUp();
       }
       return console.log('valori non validi');
+    },
+    cleanUp() {
+      setTimeout(() => {
+        this.inputName = '';
+        this.inputEmail = '';
+        this.inputDate = '';
+        this.inputText = '';
+        this.inputPhone = '';
+      }, 2000);
     },
   },
 };

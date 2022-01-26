@@ -23,10 +23,11 @@
             </li>
             <li>
               <button
+                id="makeApp"
                 type="button"
                 class="btn btn-primary btn-lg text-uppercase"
               >
-                Make appointment
+                <a href="#inputBtn">Make appointment</a>
               </button>
             </li>
           </ul>
@@ -37,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Header',
   props: {

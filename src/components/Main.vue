@@ -157,7 +157,10 @@
         </div>
       </div>
     </div>
-    <div class="firstgradient">
+    <div
+      id="inputBtn"
+      class="firstgradient"
+    >
       <div class="row">
         <div
           v-for="(high, x) in facHighlight"
@@ -182,7 +185,9 @@
     <div class="row">
       <div class="inputarea">
         <div class="row justify-content-center text-center text-box">
-          <h2 class="">
+          <h2
+            class=""
+          >
             Make An Appointment
           </h2>
           <p>
