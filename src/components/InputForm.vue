@@ -63,7 +63,7 @@
       <button
         type="submit"
         class="btn btn-primary btn-lg text-uppercase rounded-0"
-        @click="saving()"
+        @click="checkTextinput()"
       >
         Make an appointment
       </button>
@@ -81,17 +81,17 @@ export default {
       inputPhone: '',
       inputDate: '',
       inputText: '',
-      allInputs: [
-        {
-          Name: null,
-        },
-      ],
     };
   },
   methods: {
-    saving() {
-      console.log('inputName', this.inputName);
-      this.allInputs.Name.push(this.inputName);
+    checkTextinput() {
+      if (this.inputName.trim() && this.inputEmail.trim() && this.inputDate && this.inputText.trim() !== '') {
+        return this.inputName
+        && this.inputEmail
+        && this.inputDate
+        && this.inputText;
+      }
+      return console.log('valori non validi');
     },
   },
 };
