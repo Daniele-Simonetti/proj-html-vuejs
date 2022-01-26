@@ -181,7 +181,7 @@
     <!-- 5 sezione -->
     <div class="row">
       <div class="inputarea">
-        <div />
+        <InputForm />
       </div>
       <div class="secondgradient">
         <div
@@ -204,10 +204,12 @@
 
 <script>
 import '@fortawesome/fontawesome-free/css/all.css';
+import InputForm from './InputForm.vue';
 
 export default {
   name: 'Main',
   components: {
+    InputForm,
   },
   props: {
     majInfos: {
@@ -240,24 +242,6 @@ export default {
         return [];
       },
     },
-  },
-  data() {
-    return {
-      sectionpresentation: [
-        {
-          title: 'Meet our Doctors',
-          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
-        },
-        {
-          title: 'Meet our Doctors',
-          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
-        },
-        {
-          title: 'Meet our Doctors',
-          text: ' Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorumque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae',
-        },
-      ],
-    };
   },
 };
 </script>
@@ -353,10 +337,10 @@ export default {
     height: 1px;
     background-color: gray;
   }
-  hr {
-    display: block;
-    width: 10%;
-  }
+  // hr {
+  //   display: block;
+  //   width: 10%;
+  // }
   .text-box {
     p {
       width: 38%;
@@ -479,7 +463,12 @@ export default {
   }
 }
 .inputarea {
-  height: 600px;
+  // height: 600px;
+  background-image: url('../assets/images/make-an-appointment.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding-top: 5em;
 }
 .secondgradient {
   background-image: url('../assets/images/rgb-gradient-bar-for-logo-carrasel.jpg');
