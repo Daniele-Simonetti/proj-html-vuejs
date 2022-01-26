@@ -1,7 +1,7 @@
 <template>
   <footer>
-    <div class="row">
-      <div class="col-4">
+    <div class="row startFooter">
+      <div class="col-4 mainPartFoot">
         <img
           :src="require(`../assets/images/medical_logo_1x_dark.png`)"
           alt="logo-nero"
@@ -20,7 +20,7 @@
         </h4>
         <i class="fab fa-facebook-square facebook" />
         <i class="fab fa-twitter-square twitter" />
-        <i class="fab fa-youtube-square" />
+        <i class="fab fa-youtube-square youtube" />
         <i class="fab fa-instagram-square instagram" />
       </div>
       <div class="col-4">
@@ -94,6 +94,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.startFooter {
+  padding: 3em;
+  .mainPartFoot {
+    p {
+      font-size: 0.7em;
+      line-height: 2.3em;
+      font-weight: 100;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 2em;
+    }
+    h4 {
+      font-weight: 100;
+    }
+    i {
+      font-size: 2em;
+      margin-right: 0.3em;
+    }
+    i.facebook {
+
+    }
+    i.twitter {
+
+    }
+    i.youtube {
+
+    }
+    i.instagram {
+
+    }
+  }
+}
 i.blueBGIcon {
   background-color: #39afbb;
   color: white;
@@ -111,7 +144,7 @@ button {
 }
 .end {
   background-color: #f1efef;
-  padding: 1.5em;
+  padding: 1.5em 3em;
   ul {
     font-size: 0.8em;
     li {
